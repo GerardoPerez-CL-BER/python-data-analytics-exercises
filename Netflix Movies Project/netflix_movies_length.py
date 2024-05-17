@@ -12,7 +12,7 @@ netflix_subset = netflix_df[netflix_df['type'] == 'Movie'].copy()
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
 
 # Filter netflix_movies to find the movies that are strictly shorter than 60 minutes
-short_movies = netflix_movies[netflix_movies['duration'] <= 60].copy()
+short_movies = netflix_movies[netflix_movies.duration < 60]
 
 # Using a for loop and if/elif statements, iterate through the rows of netflix_movies and assign colors of your choice to four genre groups ("Children", "Documentaries", "Stand-Up", and "Other" for everything else).
 # Define genre colors
