@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 netflix_df = pd.read_csv('netflix_data.csv')
 
 # Filter the data to remove TV shows and store as netflix_subset
-netflix_subset = netflix_df[netflix_df['type'] == 'Movie'].copy()
+netflix_subset = netflix_df[netflix_df['type'] == 'Movie']
 
 # Investigate and subset the Netflix movie data
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
